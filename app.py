@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, make_response
 from estrutura import Autor, Postagem, app, db
+import os
 import json
 import jwt
 from datetime import datetime, timedelta
@@ -206,4 +207,6 @@ def excluir_autor(autor, id_autor):
     return jsonify({'Mensagem': 'Autor excluído com sucesso!'})
 
 
-app.run(port=8000, host='localhost', debug=True)
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
