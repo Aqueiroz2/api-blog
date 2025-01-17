@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
     'DATABASE_URI',
-    'postgresql://postgres:CxyZpOggR2MmF1GY@db.ihxzozdgxmebnupixdji.supabase.co:5432/postgres'
+    'postgresql://postgres.fiubhlapstreyxlyejic:CxyZpOggR2MmF1GY@db@aws-0-us-west-1.pooler.supabase.com:5432/postgres'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
